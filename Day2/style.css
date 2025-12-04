@@ -1,0 +1,130 @@
+/* Simple reset - helps make layout consistent across browsers */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Full page with pleasant gradient background */
+body, html {
+  height: 100%;
+  background: linear-gradient(135deg, #6a8cff 0%, #a07bff 100%);
+}
+
+/* Center the main panel vertically and horizontally */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* The central light panel that contains the cards */
+.panel {
+  width: 90%;
+  max-width: 1000px;
+  background: #e8f0ff; /* pale panel color */
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Cards row - use flex to lay cards horizontally */
+.cards {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: stretch;
+  /* allow wrapping on small screens */
+  flex-wrap: wrap;
+}
+
+/* Single card styling */
+.card {
+  background: white;
+  border-radius: 10px;
+  width: 300px;           /* fixed-ish width like the screenshot */
+  overflow: hidden;       /* round image and body together */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 14px rgba(20,20,20,0.08);
+}
+
+/* Image area - keep aspect ratio */
+.card-image img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover; /* crop nicely to fit area */
+  display: block;
+}
+
+/* Card body spacing */
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* small colored badge at top-left of the body */
+.badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #bfe2ff;
+  color: #00467f;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* other colored badges */
+.badge.yellow { background: #fff3c4; color: #7a5a00; }
+.badge.red    { background: #ffdede; color: #8a1f1f; }
+
+/* title and text */
+.card-title {
+  font-size: 18px;
+  line-height: 1.1;
+  color: #222;
+}
+
+.card-text {
+  font-size: 13px;
+  color: #444;
+  opacity: 0.85;
+  margin-top: 2px;
+  flex: 1; /* push footer to bottom if description grows */
+}
+
+/* Footer: avatar and author name */
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.author {
+  font-size: 13px;
+  color: #333;
+}
+
+/* Responsive: on very small screens make cards full width stacked */
+@media (max-width: 760px) {
+  .card {
+    width: 100%;
+  }
+  .panel { padding: 18px; }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Contact</a></li>
+            <li><a href="/">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <p>This is main</p>
+</main>
+
+<article>
+    <p>This is article</p>
+</article>
+
+<section>
+    <p>This is a section</p>
+</section>
+
+<aside>
+    <p>This is aside</p>
+</aside>
+
+<footer>
+    <p>This is footer</p>
+</footer>
+
+<!-- Video -->
+<video controls autoplay muted loop width="600" height="400">
+    <source src="C:\Users\elakk\Videos\Screen Recordings\Screen Recording 2025-05-06 151525.mp4" type="video/mp4">
+    <source src="C:\Users\elakk\Videos\Screen Recordings\Screen Recording 2025-05-06 151525.mp4" type="video/webm">
+</video>
+
+<!-- Audio -->
+<audio controls>
+    <source src="C:\Users\elakk\Music\Music\New folder\Imagine Dragons - Demons (Lyrics).mp3" type="audio/mpeg">
+</audio>
+
+<!-- Inputs -->
+<input type="checkbox">
+<input type="color">
+<input type="file">
+<input type="date">
+<input type="datetime-local">
+<input type="password">
+
+<label for="urls">Type your URL</label>
+<input type="url" id="urls" placeholder="https://www.example.com">
+
+<input type="text">
+<input type="number">
+<input type="month">
+
+<input 
+    type="text"
+    placeholder="Enter text here"
+    value="abcd"
+    disabled
+    required
+    title="This is a required field"
+    maxlength="6"
+    minlength="2">
+
+<input type="number" min="2" max="10">
+
+<br><br>
+
+<!-- Form -->
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="John Doe" required minlength="2">
+    <br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="password" required minlength="2">
+    <br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" min="18" placeholder="23">
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Example forms -->
+<form action="getData()" method="get"></form>
+<form action="postData()" method="post"></form>
+
+</body>
+</html>
