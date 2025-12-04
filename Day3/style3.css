@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(222, 161, 161);
+}
+#c1::after{
+    content:'The background is red';
+    color:  white;
+    font-size: 40px;
+}
+/* 
+xs-480px-small phob=nes
+sm-765px-tabulets
+md-1024px-small laptops
+lg-1280px-desktop
+xl-1440px-bigger monitors
+
+ */
+ @media print and (min-resolution: 400dpi) {
+    
+ }
+ @media (min-aspect-ratio:16/9) {
+    
+ }
+
+ @media screen and (min-width: 1440px) {
+    body{
+        background-color:rgb(207, 175, 237);
+    }
+    #c1::after{
+        content:'The background is bigger monitor';
+
+    }
+     
+}
+@media screen and (min-width: 480px) and (max-width:764) and
+(orientation:landscape){
+    body{
+        background-color:rgb(169, 169, 214);
+    }
+    #c1::after{
+        content:'The background is small phones';
+
+    }
+     
+}@media screen and (min-width: 765px){
+    body{
+        background-color:rgb(125, 176, 179);
+    }
+    #c1::after{
+        content:'The background is  tabulets';
+
+    }
+     
+}@media screen and (min-width: 1024px){
+    body{
+        background-color:hotpink
+    }
+    #c1::after{
+        content:'The background is small laptops';
+
+    }
+     
+}
+@media screen and (min-width: 1280px){
+    body{
+        background-color:darkseagreen;
+    }
+    #c1::after{
+        content:'The background is desktops';
+
+    }
+     
+}
